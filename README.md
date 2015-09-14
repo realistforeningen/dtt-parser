@@ -6,8 +6,8 @@ Acquire the lates source files (`zrep.tar.xz`). Uncompress it from this
 directory:
 
 ```
-cd dtt-parser
-tar -xf ~/Downloads/zrep.tar.xz
+$ cd dtt-parser
+$ tar -xf ~/Downloads/zrep.tar.xz
 ```
 
 ## Import new files
@@ -26,7 +26,7 @@ tar -xf ~/Downloads/zrep.tar.xz
 2015-10-14 12:00
 ```
 
-**Step 2:** Run `make`
+**Step 2:** Run `make`.
 
 **Step 3:** reports/001.txt and reports/002.txt now contains the data for the
 two time periods.
@@ -34,4 +34,7 @@ two time periods.
 **Step 4:** (*On Mac*) Write `pbcopy < reports/002.txt` to copy the data to the
 clipboard. Paste it into Google Sheets.
 
+## When in doubt
+
+Run `make`.
 
