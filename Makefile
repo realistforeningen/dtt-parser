@@ -8,10 +8,14 @@ archives:
 archives/all.tar.xz: sources | archives
 	tar -cJf $@ $</*
 
+ifneq ("$(wildcard reports.txt)", "")
 reports: reports.txt sources parser.py
 	mkdir -p reports
 	rm -f reports/*
 	python parser.py
+else
+reports:
+endif
 
 check:
 
