@@ -28,8 +28,8 @@ $ tar -xf ~/Downloads/zrep.tar.xz
 
 **Step 2:** Run `make`.
 
-**Step 3:** reports/001.txt and reports/002.txt now contains the data for the
-two time periods.
+**Step 3:** `reports/001.txt` and `reports/002.txt` now contains the data for
+the two time periods.
 
 **Step 4:** (*On Mac*) Write `pbcopy < reports/002.txt` to copy the data to the
 clipboard. Paste it into Google Sheets.
