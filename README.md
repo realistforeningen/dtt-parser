@@ -18,7 +18,9 @@ $ tar -xf ~/Downloads/zrep.tar.xz
 
 ## Build reports
 
-**Step 1:** Create a `reports.txt` with the following contents:
+**Step 1:** Run `make latest` to find the latest transaction that is included in the DTT files.
+
+**Step 2:** Append that timestamp to the `reports.txt`-file:
 
 ```
 2015-08-31 19:10
@@ -26,12 +28,12 @@ $ tar -xf ~/Downloads/zrep.tar.xz
 2015-10-14 12:00
 ```
 
-**Step 2:** Run `make`.
+**Step 3:** Run `make`.
 
-**Step 3:** `reports/001.txt` and `reports/002.txt` now contains the data for
+**Step 4:** `reports/001.txt` and `reports/002.txt` now contains the data for
 the two time periods.
 
-**Step 4:** (*On Mac*) Write `pbcopy < reports/002.txt` to copy the data to the
+**Step 5:** (*On Mac*) Write `pbcopy < reports/002.txt` to copy the data to the
 clipboard. Paste it into Google Sheets.
 
 ## When in doubt

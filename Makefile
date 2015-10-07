@@ -1,4 +1,4 @@
-.PHONY: all check
+.PHONY: all check latest
 
 all: check reports archives/all.tar.xz
 
@@ -18,4 +18,7 @@ reports:
 endif
 
 check:
+
+latest:
+	@ python latest.py
 

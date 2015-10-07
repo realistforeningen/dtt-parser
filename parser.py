@@ -8,21 +8,33 @@ class Entry:
 class Order:
     pass
 
-def readdir(directory):
-    files = os.listdir(directory)
-    files.sort()
-
+def readfiles(files):
     last_ts = datetime.min
 
     for fname in files:
-        path = os.path.join(directory, fname)
-        parser = DTT(open(path))
+        parser = DTT(open(fname))
 
         for order in parser:
             if order.timestamp < last_ts:
                 continue
             yield order
             last_ts = order.timestamp
+
+def expanddir(directory):
+    files = os.listdir(directory)
+    files.sort()
+    return [os.path.join(directory, fname) for fname in files]
+
+def readdir(directory):
+    files = expanddir(directory)
+
+    for order in readfiles(files):
+        yield order
+
+def readlatestfile(directory):
+    fname = expanddir(directory)[-1]
+    for order in readfiles([fname]):
+        yield order
 
 class DTT:
     def __init__(self, stream):
