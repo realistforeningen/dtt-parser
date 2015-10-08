@@ -40,3 +40,10 @@ clipboard. Paste it into Google Sheets.
 
 Run `make`.
 
+## Scripts / other reports
+
+The following scripts are included:
+
+* `popular.py`: Returns the number of sold products in a period.
+
+
